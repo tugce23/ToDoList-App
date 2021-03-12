@@ -1,7 +1,8 @@
 function addItem(){
-    const inputValue=document.getElementById('todo_input').value;
+    let inputBox=document.getElementById('todo_input');
     const listItem=document.createElement('li');
     listItem.className='todo-list-item'
-    listItem.innerHTML=inputValue;
-    document.getElementById('todo_list').appendChild(listItem)
+    listItem.innerHTML=inputBox.value;
+    document.getElementById('todo_list').appendChild(listItem);
+    inputBox.value="";
 }

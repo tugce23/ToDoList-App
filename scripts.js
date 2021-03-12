@@ -4,7 +4,7 @@ function addItem(){
         const listItem=document.createElement('li');
         listItem.className='todo-list-item'
         listItem.innerHTML=inputBox.value;
-        listItem.onclick=()=>{removeItem(listItem)};
+        listItem.onclick=()=>{document.getElementById('todo_list').removeChild(listItem)};
         document.getElementById('todo_list').appendChild(listItem);
         inputBox.value="";
     }else{
@@ -12,11 +12,5 @@ function addItem(){
     }
     
 }
-function removeItem(listItem){
-    /*const isConfirmed=confirm('Are you sure?');
-    if(isConfirmed){
-        listItem.remove();
-    }
-    */
-    document.getElementById('todo_list').removeChild(listItem)
-}
+
+    

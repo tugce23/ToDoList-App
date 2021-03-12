@@ -4,6 +4,7 @@ function addItem(){
         const listItem=document.createElement('li');
         listItem.className='todo-list-item'
         listItem.innerHTML=inputBox.value;
+        listItem.onclick=()=>{removeItem(listItem)};
         document.getElementById('todo_list').appendChild(listItem);
         inputBox.value="";
     }else{

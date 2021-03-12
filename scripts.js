@@ -11,3 +11,11 @@ function addItem(){
     }
     
 }
+function removeItem(listItem){
+    /*const isConfirmed=confirm('Are you sure?');
+    if(isConfirmed){
+        listItem.remove();
+    }
+    */
+    document.getElementById('todo_list').removeChild(listItem)
+}
